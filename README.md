@@ -1,8 +1,8 @@
 WRITE-UPS
 
-Privileged container
+**Privileged container**
 
-identify capabilities with:
+Identify capabilities with:
 ```console
 capsh --print
 ```
@@ -12,7 +12,8 @@ search for mounting points with:
 ```console
 lsblk
 ```
-this will show you:
+
+This will show you:
 
 ```console
 root@98cc2350da20:~# lsblk
@@ -23,7 +24,16 @@ xvda    202:0    0   10G  0 disk
 `-xvda5 202:5    0  975M  0 part [SWAP]
 xvdh    202:112  0    1G  0 disk 
 ```
+
 Now make a folder for mounting:
+
+```console
+
+mkdir /tmp/host
+
+```
+
+Then you can mount to host machine:
 
 ```console
 mount /dev/xvda1 /tmp/host
